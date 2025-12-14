@@ -15,9 +15,9 @@ export default function WhyChooseUs() {
                         {/* Left Content */}
                         <div>
                             <p className="text-orange-300 text-sm font-medium mb-2">Why Choose Us?</p>
-                            <h2 className="text-4xl md:text-5xl font-bold text-red-500 mb-6">Complete Facilities</h2>
+                            <h2 className="text-4xl md:text-5xl font-bold text-red-500 mb-6">Exceptional Learning Environment</h2>
                             <p className="text-gray-500 mb-12">
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                                At Bright Future Academy, we provide a nurturing, safe, and stimulating environment where children can explore, learn, and grow with confidence. Our state-of-the-art facilities are designed with your child's development in mind.
                             </p>
 
                             {/* Features List */}
@@ -30,9 +30,9 @@ export default function WhyChooseUs() {
                                         </div>
                                     </div>
                                     <div>
-                                        <h3 className="text-xl font-bold text-red-500 mb-2">Playing Area</h3>
+                                        <h3 className="text-xl font-bold text-red-500 mb-2">Safe Play Areas</h3>
                                         <p className="text-gray-500">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.
+                                            Our carefully designed outdoor and indoor play spaces promote physical development, social interaction, and joyful exploration in a secure environment.
                                         </p>
                                     </div>
                                 </div>
@@ -45,9 +45,9 @@ export default function WhyChooseUs() {
                                         </div>
                                     </div>
                                     <div>
-                                        <h3 className="text-xl font-bold text-red-500 mb-2">Outbound Area</h3>
+                                        <h3 className="text-xl font-bold text-red-500 mb-2">Field Trips & Adventures</h3>
                                         <p className="text-gray-500">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.
+                                            We organize educational excursions and special events that extend learning beyond the classroom and create lasting memories.
                                         </p>
                                     </div>
                                 </div>
@@ -60,9 +60,9 @@ export default function WhyChooseUs() {
                                         </div>
                                     </div>
                                     <div>
-                                        <h3 className="text-xl font-bold text-red-500 mb-2">Reading Area</h3>
+                                        <h3 className="text-xl font-bold text-red-500 mb-2">Literacy Corner</h3>
                                         <p className="text-gray-500">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.
+                                            Our cozy reading nooks with carefully selected age-appropriate books nurture a lifelong love of reading and language development.
                                         </p>
                                     </div>
                                 </div>

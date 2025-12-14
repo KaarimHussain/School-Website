@@ -9,8 +9,8 @@ export default function Gallery() {
                 <div className="max-w-7xl mx-auto px-4 pt-50 pb-50">
                     {/* Header */}
                     <div className="text-center mb-12">
-                        <p className="text-orange-300 text-sm font-medium mb-2">Gallery</p>
-                        <h2 className="text-4xl md:text-5xl font-bold text-red-500">Moment Captured</h2>
+                        <p className="text-orange-300 text-sm font-medium mb-2">Our Moments</p>
+                        <h2 className="text-4xl md:text-5xl font-bold text-red-500">Joyful Memories</h2>
                     </div>
 
                     {/* Gallery Grid */}

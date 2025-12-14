@@ -12,22 +12,22 @@ export default function Testimonials() {
     const testimonials = [
         {
             id: 1,
-            text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.",
-            name: "Tyler Curtis",
-            role: "Entrepreneur",
+            text: "My daughter has blossomed at Bright Future Academy! The caring teachers have helped her become more confident and eager to learn. The nurturing environment has made all the difference in her development.",
+            name: "Jennifer Martinez",
+            role: "Parent",
             avatar: ReviewAvatar
         },
         {
             id: 2,
-            text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.",
-            name: "Alessio Dunn",
-            role: "Manager",
+            text: "The educational programs at Bright Future have exceeded our expectations. My son's social skills and creativity have flourished since joining their caring community. We're so grateful for the wonderful experience.",
+            name: "Robert Chen",
+            role: "Parent",
             avatar: ReviewAvatar
         },
         {
             id: 3,
-            text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.",
-            name: "Sarah Johnson",
+            text: "As a working parent, I appreciate the open communication from the staff. I feel confident knowing my child is in a safe, stimulating environment where she feels valued and encouraged to explore.",
+            name: "Amanda Williams",
             role: "Parent",
             avatar: ReviewAvatar
         }
@@ -39,10 +39,10 @@ export default function Testimonials() {
                 <div className="max-w-7xl mx-auto px-4">
                     {/* Header */}
                     <div className="text-center mb-16">
-                        <p className="text-orange-300 text-sm font-medium mb-2">Testimonial</p>
-                        <h2 className="text-4xl md:text-5xl font-bold text-red-500 mb-6">Parent Testimonial</h2>
+                        <p className="text-orange-300 text-sm font-medium mb-2">What Parents Say</p>
+                        <h2 className="text-4xl md:text-5xl font-bold text-red-500 mb-6">Happy Families</h2>
                         <p className="text-gray-500 max-w-2xl mx-auto">
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
+                            Hear from parents who have experienced the Bright Future difference. We're proud to be part of so many children's educational journeys.
                         </p>
                     </div>
 
@@ -57,8 +57,8 @@ export default function Testimonials() {
                         >
                             <CarouselContent>
                                 {testimonials.map((testimonial) => (
-                                    <CarouselItem key={testimonial.id} className="md:basis-1/2 lg:basis-1/2 select-none">
-                                        <div className="p-4">
+                                    <CarouselItem key={testimonial.id} className="md:basis-1/2 lg:basis-1/2 select-none h-full">
+                                        <div className="p-4 h-full">
                                             <div className="bg-white rounded-3xl p-8 shadow-sm h-full">
                                                 {/* Testimonial Text */}
                                                 <p className="text-gray-500 mb-8 leading-relaxed">

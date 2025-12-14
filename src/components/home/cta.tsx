@@ -33,17 +33,17 @@ export default function CTA() {
 
                     {/* Main Heading */}
                     <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-red-500 mb-6 leading-tight px-4">
-                        Don't Let Your Child's Childhood Pass, Join Us Now!
+                        Join Our Bright Future Family!
                     </h2>
 
                     {/* Description */}
                     <p className="text-gray-500 text-sm md:text-base mb-10 max-w-2xl mx-auto px-4">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.
+                        Give your child the gift of a nurturing, educational environment where they can explore, learn, and grow. Contact us today to schedule a visit and see how we can support your child's development.
                     </p>
 
                     {/* CTA Button */}
                     <button className="bg-red-500 hover:bg-red-600 text-white font-semibold px-10 py-4 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
-                        Read More
+                        Schedule a Visit
                     </button>
                 </div>
             </div>

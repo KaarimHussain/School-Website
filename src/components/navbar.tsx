@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "./ui/dialog";
 import ContactForm from "./contact-form";
+import Logo from "@/assets/image/Logo.png";
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -37,7 +38,7 @@ export default function Navbar() {
                 {/* Logo */}
                 <div className="shrink-0 flex items-center">
                     <img
-                        src="https://templatekit.jegtheme.com/kidzena/wp-content/uploads/sites/83/2021/04/kidzena-red.png"
+                        src={Logo}
                         className="object-contain w-28 sm:w-35 aspect-video"
                         alt="logo"
                     />
@@ -105,11 +106,10 @@ export default function Navbar() {
 
             {/* Mobile Dropdown Menu */}
             <div
-                className={`md:hidden transition-all duration-200 ${
-                    menuOpen
+                className={`md:hidden transition-all duration-200 ${menuOpen
                         ? "max-h-80 opacity-100 mt-1 pointer-events-auto"
                         : "max-h-0 opacity-0 pointer-events-none"
-                } overflow-hidden bg-white rounded-2xl shadow-lg w-full`}
+                    } overflow-hidden bg-white rounded-2xl shadow-lg w-full`}
             >
                 <ul className="flex flex-col space-y-2 px-6 py-4">
                     {links.map((link) => (

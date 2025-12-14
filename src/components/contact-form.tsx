@@ -155,8 +155,8 @@ export default function ContactForm({ isDialog = false, onSuccess }: ContactForm
                                     </div>
                                     <h3 className="text-xl font-bold text-red-500 mb-2">Email Us</h3>
                                     <p className="text-gray-600 text-sm">
-                                        hello@kidzena.com<br />
-                                        info@kidzena.com
+                                        hello@brightfuture.edu<br />
+                                        info@brightfuture.edu
                                     </p>
                                 </div>
                             </div>

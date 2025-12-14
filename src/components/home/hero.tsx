@@ -17,17 +17,17 @@ export default function Hero() {
                 <div className="relative z-10 w-full h-full flex justify-center flex-col max-w-7xl p-4 gap-3
                     sm:p-5 sm:gap-5">
                     <h2 className="text-lg sm:text-2xl font-bold text-white">
-                        Kidzena Kindergarten.
+                        Bright Future Academy.
                     </h2>
                     <h1 className="text-5xl sm:text-7xl font-bold text-white leading-12 sm:leading-[0.9]">
-                        Kids Playground <br />
-                        and Education.
+                        Nurturing Minds, <br />
+                        Building Futures.
                     </h1>
                     <Button
                         className="bg-red-600 text-white hover:bg-yellow-500 rounded-full text-base sm:text-lg w-fit py-3 px-6 sm:py-7 sm:px-15 mt-4 sm:mt-5"
                         size={"lg"}
                     >
-                        Get Started
+                        Join Our Family
                     </Button>
                 </div>
                 <WaveDivider color="#fff" className="hidden lg:block absolute -bottom-20 w-full" />

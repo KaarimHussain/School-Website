@@ -14,22 +14,22 @@ const serviceCards: ServiceCard[] = [
     {
         color: "bg-blue-500",
         icon: <BookOpen className="w-12 h-12" />,
-        title: "Best Study Value"
+        title: "Early Learning"
     },
     {
         color: "bg-orange-500",
         icon: <Paintbrush className="w-12 h-12" />,
-        title: "Cognitive & Creative"
+        title: "Creative Arts"
     },
     {
         color: "bg-red-500",
         icon: <Wallet className="w-12 h-12" />,
-        title: "Cheap & Good Value"
+        title: "Affordable Excellence"
     },
     {
         color: "bg-green-500",
         icon: <Users className="w-12 h-12" />,
-        title: "Parent Trust Guarantee"
+        title: "Family Partnership"
     }
 ];
 
@@ -47,12 +47,12 @@ export default function Services() {
 
                         {/* Red Heading */}
                         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-red-600 leading-tight mb-6">
-                            Playing & Learning
+                            Our Enriching Programs
                         </h2>
 
                         {/* Description */}
                         <p className="text-gray-400 leading-relaxed text-lg mb-8">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            At Bright Future Academy, we offer a variety of programs designed to nurture your child's development through play, learning, and exploration. Our experienced educators create a safe, fun, and educational environment for children to thrive.
                         </p>
 
                         {/* Button */}
@@ -60,11 +60,11 @@ export default function Services() {
                             className="bg-red-600 text-white hover:bg-yellow-500 rounded-full px-8 py-6 text-base font-medium mb-8"
                             size="lg"
                         >
-                            Get Start Now
+                            Explore Programs
                         </Button>
 
                         {/* Air Balloon at bottom-left */}
-                        <div className="absolute bottom-0 left-0 w-48 h-auto -translate-x-8 translate-y-8">
+                        <div className="absolute bottom-0 left-0 w-48 h-auto -translate-x-8 translate-y-8 z-1">
                             <img
                                 src={AirBalloon}
                                 alt="Hot Air Balloon"

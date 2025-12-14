@@ -6,24 +6,24 @@ export default function OurTeacher() {
     const teachers = [
         {
             id: 1,
-            name: "Edward Price",
-            role: "Teacher",
+            name: "Emma Johnson",
+            role: "Early Childhood Specialist",
             image: Teacher2,
             bgColor: "bg-red-500",
             circleBg: "bg-white"
         },
         {
             id: 2,
-            name: "Edgar Warren",
-            role: "Teacher",
+            name: "Michael Thompson",
+            role: "Creative Arts Educator",
             image: Teacher1,
             bgColor: "bg-blue-600",
             circleBg: "bg-white"
         },
         {
             id: 3,
-            name: "Ellice Wolf",
-            role: "Teacher",
+            name: "Sophia Garcia",
+            role: "Play-Based Learning Expert",
             image: Teacher3,
             bgColor: "bg-orange-400",
             circleBg: "bg-white"
@@ -36,10 +36,10 @@ export default function OurTeacher() {
                 <div className="max-w-7xl mx-auto">
                     {/* Header */}
                     <div className="text-center mb-16">
-                        <p className="text-orange-300 text-sm font-medium mb-2">Our Teacher</p>
-                        <h2 className="text-4xl md:text-5xl font-bold text-red-500 mb-6">Experienced Teacher</h2>
+                        <p className="text-orange-300 text-sm font-medium mb-2">Our Team</p>
+                        <h2 className="text-4xl md:text-5xl font-bold text-red-500 mb-6">Caring Educators</h2>
                         <p className="text-gray-500 max-w-2xl mx-auto">
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus
+                            Our dedicated team of educators brings passion, expertise, and genuine care to every interaction with your child. They create a warm, inclusive environment where every child can thrive.
                         </p>
                     </div>
 

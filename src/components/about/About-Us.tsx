@@ -37,15 +37,15 @@ export default function AboutUs() {
                         <div>
                             <p className="text-orange-300 text-sm font-medium mb-2">About Us</p>
                             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-red-500 mb-6 leading-tight">
-                                Give the Children Space to Grow a Creativity
+                                Fostering Growth and Discovery
                             </h2>
                             <p className="text-gray-500 leading-relaxed mb-8">
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+                                At Bright Future Academy, we're committed to providing a nurturing environment where children feel safe, valued, and excited to learn. Our play-based curriculum encourages curiosity and creativity while building foundational academic and social skills. We believe in celebrating each child's unique learning journey.
                             </p>
 
                             {/* Headmaster Info */}
                             <div className="mt-8">
-                                <p className="text-blue-600 text-xl font-bold">Margaret T., Headmaster</p>
+                                <p className="text-blue-600 text-xl font-bold">Maria Rodriguez, School Director</p>
                             </div>
                         </div>
                     </div>

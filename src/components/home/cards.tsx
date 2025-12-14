@@ -13,19 +13,19 @@ const cardsData: CardData[] = [
         color: "bg-blue-500",
         icon: <Send className="w-12 h-12" />,
         title: "Building Imagination",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis."
+        description: "At Bright Future, we nurture creativity through imaginative play, storytelling, and open-ended activities that encourage children to dream big."
     },
     {
         color: "bg-red-500",
         icon: <Brain className="w-12 h-12" />,
         title: "Growing Cognitive",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis."
+        description: "Our thoughtfully designed curriculum helps develop critical thinking, problem-solving skills, and a love for learning that lasts a lifetime."
     },
     {
         color: "bg-yellow-500",
         icon: <Lightbulb className="w-12 h-12" />,
         title: "Increase Creativity",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis."
+        description: "We provide diverse opportunities for artistic expression, from painting to music, drama to dance, allowing each child to discover their unique talents."
     }
 ];
 

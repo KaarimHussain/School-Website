@@ -5,12 +5,12 @@ import { Check } from "lucide-react";
 import { Button } from "../ui/button";
 
 const features = [
-    "First & Reliable",
-    "Tracking Service",
-    "Worldwide Service",
-    "B2B Exchange",
-    "Transparent Pricing",
-    "20/5 Support"
+    "Nurturing Environment",
+    "Experienced Teachers",
+    "Safe & Caring",
+    "Creative Learning",
+    "Parental Involvement",
+    "24/7 Support"
 ];
 
 export default function AboutUs() {
@@ -45,12 +45,12 @@ export default function AboutUs() {
 
                         {/* Red Headline */}
                         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-red-600 leading-tight">
-                            Give the Children Space to Grow a Creativity
+                            Where Little Minds Bloom
                         </h2>
 
                         {/* Description */}
                         <p className="text-gray-400 leading-relaxed text-lg">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            At Bright Future Academy, we provide a nurturing environment where children can explore, discover, and grow. Our experienced educators are dedicated to fostering creativity, curiosity, and confidence in every child through play-based learning and personalized attention.
                         </p>
 
                         {/* Features Grid */}
@@ -69,7 +69,7 @@ export default function AboutUs() {
                                 className="bg-red-600 text-white hover:bg-yellow-500 rounded-full px-8 py-6 text-base font-medium"
                                 size="lg"
                             >
-                                About Us
+                                Discover Bright Future
                             </Button>
                         </div>
                     </div>
