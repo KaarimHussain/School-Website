@@ -81,8 +81,8 @@ assets/
 
 1. **Clone this repository**
    ```bash
-   git clone <your_repo_url>
-   cd <repo_folder>
+   git clone https://github.com/KaarimHussain/School-Website
+   cd School-Website
    ```
 
 2. **Install dependencies**
@@ -173,8 +173,7 @@ MIT
 
 ## Maintainer
 
-- _Your Name or Organization_
-- _Contact or website_
+- _Kaarim-Hussain_ 
 
 ---
 **Questions or suggestions?**  
