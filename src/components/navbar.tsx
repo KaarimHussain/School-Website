@@ -33,7 +33,7 @@ export default function Navbar() {
     };
 
     return (
-        <header className="fixed top-5 left-1/2 transform -translate-x-1/2 w-[95%] md:w-[80%] max-w-7xl z-50">
+        <header className="fixed sm:top-5 top-3 left-1/2 transform -translate-x-1/2 w-[95%] md:w-[80%] max-w-7xl z-50">
             <nav className="bg-white rounded-2xl shadow-lg px-5 flex items-center justify-between">
                 {/* Logo */}
                 <div className="shrink-0 flex items-center">
@@ -46,7 +46,7 @@ export default function Navbar() {
 
                 {/* Hamburger Menu button (Mobile) */}
                 <button
-                    className="md:hidden ml-4 rounded-full p-2 hover:bg-gray-100 transition"
+                    className="lg:hidden ml-4 rounded-full p-2 hover:bg-gray-100 transition"
                     aria-label="Open main menu"
                     onClick={() => setMenuOpen((open) => !open)}
                 >
@@ -75,7 +75,7 @@ export default function Navbar() {
                 </button>
 
                 {/* Navigation Links (Desktop) */}
-                <ul className="hidden md:flex space-x-8 mx-auto">
+                <ul className="hidden lg:flex space-x-8 mx-auto">
                     {links.map((link) => (
                         <li key={link.label}>
                             <Link
@@ -90,7 +90,7 @@ export default function Navbar() {
                 </ul>
 
                 {/* CTA Button (Desktop) */}
-                <div className="hidden md:block">
+                <div className="hidden lg:block">
                     <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
                         <DialogTrigger asChild>
                             <Button className="bg-red-600 text-white hover:bg-yellow-500 rounded-full text-lg" size={"lg"}>
@@ -106,7 +106,7 @@ export default function Navbar() {
 
             {/* Mobile Dropdown Menu */}
             <div
-                className={`md:hidden transition-all duration-200 ${menuOpen
+                className={`lg:hidden transition-all duration-200 ${menuOpen
                         ? "max-h-80 opacity-100 mt-1 pointer-events-auto"
                         : "max-h-0 opacity-0 pointer-events-none"
                     } overflow-hidden bg-white rounded-2xl shadow-lg w-full`}
