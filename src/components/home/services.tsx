@@ -1,7 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { BookOpen, Paintbrush, Wallet, Users } from "lucide-react";
-import { Button } from "../ui/button";
 import JToy from "@/assets/image/J-Letter-Toy.png";
 import TToy from "@/assets/image/T-Letter-Toy.png";
 import AirBalloon from "@/assets/image/Hot-Air-Balloon.png";
