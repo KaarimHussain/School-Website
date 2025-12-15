@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import {
     Carousel,
     CarouselContent,
@@ -35,19 +36,47 @@ export default function Testimonials() {
 
     return (
         <>
-            <div className="min-h-[50vh] w-full bg-gray-50 py-20">
+            <div className="min-h-[50vh] w-full bg-[#fcf9f4] py-20">
                 <div className="max-w-7xl mx-auto px-4">
                     {/* Header */}
                     <div className="text-center mb-16">
-                        <p className="text-orange-300 text-sm font-medium mb-2">What Parents Say</p>
-                        <h2 className="text-4xl md:text-5xl font-bold text-red-500 mb-6">Happy Families</h2>
-                        <p className="text-gray-500 max-w-2xl mx-auto">
+                        <motion.p
+                            className="text-orange-300 text-sm font-medium mb-2"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.4, ease: "easeOut" }}
+                        >
+                            What Parents Say
+                        </motion.p>
+                        <motion.h2
+                            className="text-4xl md:text-5xl font-bold text-red-500 mb-6"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
+                        >
+                            Happy Families
+                        </motion.h2>
+                        <motion.p
+                            className="text-gray-500 max-w-2xl mx-auto"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
+                        >
                             Hear from parents who have experienced the Bright Future difference. We're proud to be part of so many children's educational journeys.
-                        </p>
+                        </motion.p>
                     </div>
 
                     {/* Carousel */}
-                    <div className="max-w-5xl mx-auto">
+                    <motion.div
+                        className="max-w-5xl mx-auto"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-50px" }}
+                        transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
+                    >
                         <Carousel
                             opts={{
                                 align: "start",
@@ -56,9 +85,19 @@ export default function Testimonials() {
                             className="w-full"
                         >
                             <CarouselContent>
-                                {testimonials.map((testimonial) => (
+                                {testimonials.map((testimonial, index) => (
                                     <CarouselItem key={testimonial.id} className="md:basis-1/2 lg:basis-1/2 select-none h-full">
-                                        <div className="p-4 h-full">
+                                        <motion.div
+                                            className="p-4 h-full"
+                                            initial={{ opacity: 0, scale: 0.95 }}
+                                            whileInView={{ opacity: 1, scale: 1 }}
+                                            viewport={{ once: true, margin: "-50px" }}
+                                            transition={{
+                                                duration: 0.4,
+                                                delay: 0.4 + (index * 0.1),
+                                                ease: "easeOut"
+                                            }}
+                                        >
                                             <div className="bg-white rounded-3xl p-8 shadow-sm h-full">
                                                 {/* Testimonial Text */}
                                                 <p className="text-gray-500 mb-8 leading-relaxed">
@@ -82,14 +121,14 @@ export default function Testimonials() {
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </motion.div>
                                     </CarouselItem>
                                 ))}
                             </CarouselContent>
                             <CarouselPrevious className="hidden md:flex" />
                             <CarouselNext className="hidden md:flex" />
                         </Carousel>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </>

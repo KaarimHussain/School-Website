@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { Send, MapPin, Phone, Mail } from "lucide-react";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
@@ -94,6 +95,30 @@ export default function ContactForm({ isDialog = false, onSuccess }: ContactForm
         }
     };
 
+    const contactCards = [
+        {
+            icon: MapPin,
+            title: "Visit Us",
+            content: "123 Sunshine Street\nKidsville, KD 12345",
+            bgColor: "bg-blue-100",
+            iconColor: "text-blue-500"
+        },
+        {
+            icon: Phone,
+            title: "Call Us",
+            content: "+1 (555) 123-4567\nMon - Fri, 8AM - 6PM",
+            bgColor: "bg-pink-100",
+            iconColor: "text-pink-500"
+        },
+        {
+            icon: Mail,
+            title: "Email Us",
+            content: "hello@brightfuture.edu\ninfo@brightfuture.edu",
+            bgColor: "bg-orange-100",
+            iconColor: "text-orange-500"
+        }
+    ];
+
     const formContent = (
         <form onSubmit={handleSubmit}>
             <div className={`${isDialog ? "p-0" : "min-h-screen w-full bg-white py-20 px-4 relative overflow-hidden"}`}>
@@ -101,13 +126,33 @@ export default function ContactForm({ isDialog = false, onSuccess }: ContactForm
                     {/* Header */}
                     {!isDialog && (
                         <div className="text-center mb-16">
-                            <p className="text-orange-400 text-sm font-medium mb-2">Get In Touch</p>
-                            <h2 className="text-4xl md:text-5xl font-bold text-red-500 mb-6">
+                            <motion.p
+                                className="text-orange-400 text-sm font-medium mb-2"
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-50px" }}
+                                transition={{ duration: 0.4, ease: "easeOut" }}
+                            >
+                                Get In Touch
+                            </motion.p>
+                            <motion.h2
+                                className="text-4xl md:text-5xl font-bold text-red-500 mb-6"
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-50px" }}
+                                transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
+                            >
                                 Let's Start Your Child's Journey! 🚀
-                            </h2>
-                            <p className="text-gray-600 max-w-2xl mx-auto">
+                            </motion.h2>
+                            <motion.p
+                                className="text-gray-600 max-w-2xl mx-auto"
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-50px" }}
+                                transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
+                            >
                                 Have questions? We'd love to hear from you! Fill out the form below and our friendly team will get back to you as soon as possible.
-                            </p>
+                            </motion.p>
                         </div>
                     )}
 
@@ -124,46 +169,42 @@ export default function ContactForm({ isDialog = false, onSuccess }: ContactForm
                         {/* Contact Info Cards - Only show on full page */}
                         {!isDialog && (
                             <div className="lg:col-span-1 space-y-6">
-                                {/* Address Card */}
-                                <div className="bg-white rounded-3xl p-6 shadow-lg transform hover:scale-105 transition-all duration-300">
-                                    <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-4">
-                                        <MapPin className="w-8 h-8 text-blue-500" />
-                                    </div>
-                                    <h3 className="text-xl font-bold text-red-500 mb-2">Visit Us</h3>
-                                    <p className="text-gray-600 text-sm">
-                                        123 Sunshine Street<br />
-                                        Kidsville, KD 12345
-                                    </p>
-                                </div>
-
-                                {/* Phone Card */}
-                                <div className="bg-white rounded-3xl p-6 shadow-lg transform hover:scale-105 transition-all duration-300">
-                                    <div className="w-16 h-16 bg-pink-100 rounded-2xl flex items-center justify-center mb-4">
-                                        <Phone className="w-8 h-8 text-pink-500" />
-                                    </div>
-                                    <h3 className="text-xl font-bold text-red-500 mb-2">Call Us</h3>
-                                    <p className="text-gray-600 text-sm">
-                                        +1 (555) 123-4567<br />
-                                        Mon - Fri, 8AM - 6PM
-                                    </p>
-                                </div>
-
-                                {/* Email Card */}
-                                <div className="bg-white rounded-3xl p-6 shadow-lg transform hover:scale-105 transition-all duration-300">
-                                    <div className="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mb-4">
-                                        <Mail className="w-8 h-8 text-orange-500" />
-                                    </div>
-                                    <h3 className="text-xl font-bold text-red-500 mb-2">Email Us</h3>
-                                    <p className="text-gray-600 text-sm">
-                                        hello@brightfuture.edu<br />
-                                        info@brightfuture.edu
-                                    </p>
-                                </div>
+                                {contactCards.map((card, index) => {
+                                    const Icon = card.icon;
+                                    return (
+                                        <motion.div
+                                            key={index}
+                                            className="bg-white rounded-3xl p-6 shadow-lg transform hover:scale-105 transition-all duration-300"
+                                            initial={{ opacity: 0, x: -20 }}
+                                            whileInView={{ opacity: 1, x: 0 }}
+                                            viewport={{ once: true, margin: "-50px" }}
+                                            transition={{
+                                                duration: 0.4,
+                                                delay: index * 0.1,
+                                                ease: "easeOut"
+                                            }}
+                                        >
+                                            <div className={`w-16 h-16 ${card.bgColor} rounded-2xl flex items-center justify-center mb-4`}>
+                                                <Icon className={`w-8 h-8 ${card.iconColor}`} />
+                                            </div>
+                                            <h3 className="text-xl font-bold text-red-500 mb-2">{card.title}</h3>
+                                            <p className="text-gray-600 text-sm whitespace-pre-line">
+                                                {card.content}
+                                            </p>
+                                        </motion.div>
+                                    );
+                                })}
                             </div>
                         )}
 
                         {/* Contact Form */}
-                        <div className={isDialog ? "w-full" : "lg:col-span-2"}>
+                        <motion.div
+                            className={isDialog ? "w-full" : "lg:col-span-2"}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
+                        >
                             <div className={`${isDialog ? "bg-transparent" : "bg-white rounded-3xl p-8 md:p-10 shadow-xl"}`}>
                                 {!isDialog && (
                                     <div className="mb-8">
@@ -301,16 +342,23 @@ export default function ContactForm({ isDialog = false, onSuccess }: ContactForm
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
+                    <hr className="my-10" />
                     {!isDialog && (
-                        <div className="mt-12 text-center">
-                            <div className="inline-block bg-white rounded-full px-8 py-4 shadow-lg">
+                        <motion.div
+                            className="text-center"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.4, delay: 0.5, ease: "easeOut" }}
+                        >
+                            <div className="inline-block bg-white">
                                 <p className="text-gray-700 font-medium">
                                     🎨 Can't wait to meet your little one! 🌟
                                 </p>
                             </div>
-                        </div>
+                        </motion.div>
                     )}
                 </div>
             </div>

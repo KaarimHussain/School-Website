@@ -1,7 +1,33 @@
-import { Facebook, Twitter, Youtube, Instagram, MapPin, Phone, Mail, Clock } from "lucide-react";
+import { motion } from "framer-motion";
+import { Facebook, Twitter, Instagram, MapPin, Phone, Mail, Clock } from "lucide-react";
 import LogoWhite from "@/assets/image/Logo-White.png";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    const socialLinks = [
+        { icon: Facebook, href: "#" },
+        { icon: Twitter, href: "#" },
+        { icon: Instagram, href: "#" }
+    ];
+
+    const quickLinks = [
+        { name: "Home", href: "/" },
+        { name: "About", href: "/about" },
+        { name: "Services", href: "/services" },
+        { name: "Contact", href: "/contact" }
+    ];
+
+    const contactInfo = [
+        { icon: MapPin, text: "123 Education Lane, Brightville, BV 12345" },
+        { icon: Phone, text: "+1 (555) 234-5678" },
+        { icon: Mail, text: "info@brightfuturechildcare.uk" },
+        { icon: Clock, text: "Mon - Fri : 7:30 AM - 6:00 PM" }
+    ];
+
     return (
         <>
             <footer className="w-full bg-sky-700 text-white pt-16 px-4">
@@ -9,99 +35,133 @@ export default function Footer() {
                     {/* Footer Content Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                         {/* About Section */}
-                        <div className="col-span-2">
+                        <motion.div
+                            className="col-span-2"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.4, ease: "easeOut" }}
+                        >
                             <h3 className="text-2xl font-bold text-orange-300 mb-4">About</h3>
                             <p className="text-white/90 text-sm leading-relaxed mb-6">
                                 At Bright Future Academy, we believe in nurturing every child's potential with love, care, and innovative education. Our warm and welcoming environment is designed to inspire young minds to explore, learn, and grow.
                             </p>
                             {/* Social Icons */}
                             <div className="flex gap-3">
-                                <a target="_blank" href="#" className="w-10 h-10 bg-orange-300 hover:bg-orange-400 rounded-lg flex items-center justify-center transition-colors">
-                                    <Facebook className="w-5 h-5 text-blue-600" />
-                                </a>
-                                <a target="_blank" href="#" className="w-10 h-10 bg-orange-300 hover:bg-orange-400 rounded-lg flex items-center justify-center transition-colors">
-                                    <Twitter className="w-5 h-5 text-blue-600" />
-                                </a>
-                                <a target="_blank" href="#" className="w-10 h-10 bg-orange-300 hover:bg-orange-400 rounded-lg flex items-center justify-center transition-colors">
-                                    <Youtube className="w-5 h-5 text-blue-600" />
-                                </a>
-                                <a target="_blank" href="#" className="w-10 h-10 bg-orange-300 hover:bg-orange-400 rounded-lg flex items-center justify-center transition-colors">
-                                    <Instagram className="w-5 h-5 text-blue-600" />
-                                </a>
+                                {socialLinks.map((social, index) => {
+                                    const Icon = social.icon;
+                                    return (
+                                        <motion.a
+                                            key={index}
+                                            target="_blank"
+                                            href={social.href}
+                                            className="w-10 h-10 bg-orange-300 hover:bg-orange-400 rounded-lg flex items-center justify-center transition-colors"
+                                            initial={{ opacity: 0, scale: 0.8 }}
+                                            whileInView={{ opacity: 1, scale: 1 }}
+                                            viewport={{ once: true, margin: "-50px" }}
+                                            transition={{
+                                                duration: 0.3,
+                                                delay: 0.3 + (index * 0.05),
+                                                ease: "easeOut"
+                                            }}
+                                        >
+                                            <Icon className="w-5 h-5 text-blue-600" />
+                                        </motion.a>
+                                    );
+                                })}
                             </div>
-                        </div>
+                        </motion.div>
 
                         {/* Quick Links */}
-                        <div className="lg:col-span-1 sm:col-span-2 col-span-2">
+                        <motion.div
+                            className="lg:col-span-1 sm:col-span-2 col-span-2"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
+                        >
                             <h3 className="text-2xl font-bold text-orange-300 mb-4">Quick Links</h3>
                             <ul className="space-y-3">
-                                <li>
-                                    <a href="/" className="text-white/90 hover:text-white text-sm transition-colors">
-                                        Home
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/about" className="text-white/90 hover:text-white text-sm transition-colors">
-                                        About
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/services" className="text-white/90 hover:text-white text-sm transition-colors">
-                                        Services
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="/contact" className="text-white/90 hover:text-white text-sm transition-colors">
-                                        Contact
-                                    </a>
-                                </li>
+                                {quickLinks.map((link, index) => (
+                                    <motion.li
+                                        key={index}
+                                        initial={{ opacity: 0, x: -10 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        viewport={{ once: true, margin: "-50px" }}
+                                        transition={{
+                                            duration: 0.3,
+                                            delay: 0.2 + (index * 0.05),
+                                            ease: "easeOut"
+                                        }}
+                                    >
+                                        <a href={link.href} className="text-white/90 hover:text-white text-sm transition-colors">
+                                            {link.name}
+                                        </a>
+                                    </motion.li>
+                                ))}
                             </ul>
-                        </div>
+                        </motion.div>
 
                         {/* Contact Info */}
-                        <div className="lg:col-span-1 sm:col-span-2 col-span-2">
+                        <motion.div
+                            className="lg:col-span-1 sm:col-span-2 col-span-2"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
+                        >
                             <h3 className="text-2xl font-bold text-orange-300 mb-4">Contact Info</h3>
                             <ul className="space-y-4">
-                                <li className="flex gap-3 text-sm">
-                                    <MapPin className="w-5 h-5 text-orange-300 shrink-0 mt-0.5" />
-                                    <span className="text-white/90">
-                                        123 Education Lane, Brightville, BV 12345
-                                    </span>
-                                </li>
-                                <li className="flex gap-3 text-sm">
-                                    <Phone className="w-5 h-5 text-orange-300 shrink-0" />
-                                    <span className="text-white/90">+1 (555) 234-5678</span>
-                                </li>
-                                <li className="flex gap-3 text-sm">
-                                    <Mail className="w-5 h-5 text-orange-300 shrink-0" />
-                                    <span className="text-white/90">info@brightfuture.edu</span>
-                                </li>
-                                <li className="flex gap-3 text-sm">
-                                    <Clock className="w-5 h-5 text-orange-300 shrink-0" />
-                                    <span className="text-white/90">Mon - Fri : 7:30 AM - 6:00 PM</span>
-                                </li>
+                                {contactInfo.map((info, index) => {
+                                    const Icon = info.icon;
+                                    return (
+                                        <motion.li
+                                            key={index}
+                                            className="flex gap-3 text-sm"
+                                            initial={{ opacity: 0, x: -10 }}
+                                            whileInView={{ opacity: 1, x: 0 }}
+                                            viewport={{ once: true, margin: "-50px" }}
+                                            transition={{
+                                                duration: 0.3,
+                                                delay: 0.3 + (index * 0.05),
+                                                ease: "easeOut"
+                                            }}
+                                        >
+                                            <Icon className="w-5 h-5 text-orange-300 shrink-0 mt-0.5" />
+                                            <span className="text-white/90">{info.text}</span>
+                                        </motion.li>
+                                    );
+                                })}
                             </ul>
-                        </div>
+                        </motion.div>
                     </div>
 
                     {/* Footer Bottom */}
-                    <div className="border-t border-white/20 pt-5">
+                    <motion.div
+                        className="border-t border-white/20 pt-5"
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "-50px" }}
+                        transition={{ duration: 0.4, delay: 0.4, ease: "easeOut" }}
+                    >
                         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                             <div className="flex items-center gap-5">
-                                <img
-                                    src={LogoWhite}
-                                    className="object-contain w-28 sm:w-35 aspect-video"
-                                    alt="Bright Future Academy logo"
-                                />
+                                <Link to={"/"} onClick={scrollToTop}>
+                                    <img
+                                        src={LogoWhite}
+                                        className="object-contain w-28 sm:w-35 aspect-video"
+                                        alt="Bright Future Academy logo"
+                                    />
+                                </Link>
                                 <p className="text-white/80 text-sm">
                                     Bright Future Academy - Where Children Flourish
                                 </p>
                             </div>
                             <p className="text-white/80 text-sm">
-                                Copyright © 2021. All rights reserved.
+                                Copyright © {new Date().getFullYear()}. All rights reserved.
                             </p>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </footer>
         </>

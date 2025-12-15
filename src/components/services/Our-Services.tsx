@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { BookOpen, Palette, Music, Globe, Heart, Sparkles } from "lucide-react";
 
 export default function OurServices() {
@@ -58,23 +59,51 @@ export default function OurServices() {
                 <div className="max-w-7xl mx-auto">
                     {/* Header */}
                     <div className="text-center mb-16">
-                        <p className="text-orange-300 text-sm font-medium mb-2">Our Services</p>
-                        <h2 className="text-4xl md:text-5xl font-bold text-red-500 mb-6">
+                        <motion.p 
+                            className="text-orange-300 text-sm font-medium mb-2"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.4, ease: "easeOut" }}
+                        >
+                            Our Services
+                        </motion.p>
+                        <motion.h2 
+                            className="text-4xl md:text-5xl font-bold text-red-500 mb-6"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
+                        >
                             What We Offer Your Child
-                        </h2>
-                        <p className="text-gray-500 max-w-2xl mx-auto">
+                        </motion.h2>
+                        <motion.p 
+                            className="text-gray-500 max-w-2xl mx-auto"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
+                        >
                             Discover our comprehensive range of programs and activities designed to nurture every aspect of your child's development in a safe and joyful environment.
-                        </p>
+                        </motion.p>
                     </div>
 
                     {/* Services Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {services.map((service) => {
+                        {services.map((service, index) => {
                             const Icon = service.icon;
                             return (
-                                <div
+                                <motion.div
                                     key={service.id}
                                     className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true, margin: "-50px" }}
+                                    transition={{ 
+                                        duration: 0.4, 
+                                        delay: index * 0.08,
+                                        ease: "easeOut" 
+                                    }}
                                 >
                                     {/* Icon */}
                                     <div className={`${service.iconBg} w-20 h-20 rounded-2xl flex items-center justify-center mb-6`}>
@@ -91,19 +120,9 @@ export default function OurServices() {
 
                                     {/* Decorative Bottom Bar */}
                                     <div className={`${service.color} h-1 w-16 rounded-full mt-6`}></div>
-                                </div>
+                                </motion.div>
                             );
                         })}
-                    </div>
-
-                    {/* CTA Section */}
-                    <div className="mt-16 text-center">
-                        <p className="text-gray-600 mb-6">
-                            Want to learn more about our programs?
-                        </p>
-                        <button className="bg-red-500 hover:bg-red-600 text-white font-semibold px-10 py-4 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
-                            Schedule a Visit
-                        </button>
                     </div>
                 </div>
             </div>

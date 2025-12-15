@@ -1,3 +1,5 @@
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import { BookOpen, Paintbrush, Wallet, Users } from "lucide-react";
 import { Button } from "../ui/button";
 import JToy from "@/assets/image/J-Letter-Toy.png";
@@ -34,6 +36,14 @@ const serviceCards: ServiceCard[] = [
 ];
 
 export default function Services() {
+    const balloonRef = useRef<HTMLDivElement>(null);
+    const { scrollYProgress } = useScroll({
+        target: balloonRef,
+        offset: ["start end", "end start"]
+    });
+
+    const balloonY = useTransform(scrollYProgress, [0, 1], [50, -50]);
+
     return (
         <section className="min-h-screen w-full bg-white py-20 px-10">
             <div className="max-w-7xl mx-auto">
@@ -41,46 +51,72 @@ export default function Services() {
                     {/* Left Section - Content */}
                     <div className="relative pb-32">
                         {/* Yellow-Orange Label */}
-                        <span className="inline-block text-orange-500 font-semibold text-sm uppercase tracking-wide mb-4">
+                        <motion.span
+                            className="inline-block text-orange-500 font-semibold text-sm uppercase tracking-wide mb-4"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.4, ease: "easeOut" }}
+                        >
                             Best Services
-                        </span>
+                        </motion.span>
 
                         {/* Red Heading */}
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-red-600 leading-tight mb-6">
+                        <motion.h2
+                            className="text-4xl md:text-5xl lg:text-6xl font-bold text-red-600 leading-tight mb-6"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
+                        >
                             Our Enriching Programs
-                        </h2>
+                        </motion.h2>
 
                         {/* Description */}
-                        <p className="text-gray-400 leading-relaxed text-lg mb-8">
-                            At Bright Future Academy, we offer a variety of programs designed to nurture your child's development through play, learning, and exploration. Our experienced educators create a safe, fun, and educational environment for children to thrive.
-                        </p>
-
-                        {/* Button */}
-                        <Button
-                            className="bg-red-600 text-white hover:bg-yellow-500 rounded-full px-8 py-6 text-base font-medium mb-8"
-                            size="lg"
+                        <motion.p
+                            className="text-gray-400 leading-relaxed text-lg mb-8"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
                         >
-                            Explore Programs
-                        </Button>
+                            At Bright Future Academy, we offer a variety of programs designed to nurture your child's development through play, learning, and exploration. Our experienced educators create a safe, fun, and educational environment for children to thrive.
+                        </motion.p>
 
-                        {/* Air Balloon at bottom-left */}
-                        <div className="absolute bottom-0 left-0 w-48 h-auto -translate-x-8 translate-y-8 z-1">
+                        {/* Air Balloon at bottom-left with Parallax */}
+                        <motion.div
+                            ref={balloonRef}
+                            className="absolute bottom-0 left-0 w-48 h-auto -translate-x-8 translate-y-8 z-1"
+                            initial={{ opacity: 0, y: 30, x: -20 }}
+                            whileInView={{ opacity: 1, y: 0, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+                            style={{ y: balloonY }}
+                        >
                             <img
                                 src={AirBalloon}
                                 alt="Hot Air Balloon"
                                 className="w-full h-auto object-contain"
                                 draggable={false}
                             />
-                        </div>
+                        </motion.div>
                     </div>
 
                     {/* Right Section - Service Cards Grid */}
                     <div className="relative">
-                        <div className="grid grid-cols-2 gap-6">
+                        <div className="grid md:grid-cols-2 grid-cols-1 gap-6">
                             {serviceCards.map((card, index) => (
-                                <div
+                                <motion.div
                                     key={index}
                                     className={`${card.color} rounded-2xl p-6 text-white flex flex-col items-center justify-center min-h-[200px] relative`}
+                                    initial={{ opacity: 0, scale: 0.9 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    viewport={{ once: true, margin: "-50px" }}
+                                    transition={{
+                                        duration: 0.4,
+                                        delay: index * 0.1,
+                                        ease: "easeOut"
+                                    }}
                                 >
                                     <div className="mb-4">
                                         {card.icon}
@@ -88,23 +124,59 @@ export default function Services() {
                                     <h3 className="text-lg font-semibold text-center">
                                         {card.title}
                                     </h3>
-                                </div>
+                                </motion.div>
                             ))}
                         </div>
 
                         {/* Floating Alphabet Blocks - Above top-right card */}
                         <div className="absolute top-0 right-0 flex gap-2 -translate-y-12 translate-x-4">
-                            <img
+                            <motion.img
                                 src={JToy}
                                 alt="J Letter Toy"
                                 className="w-20 h-20 object-contain"
                                 draggable={false}
+                                initial={{ opacity: 0, y: -20, rotate: -15 }}
+                                animate={{
+                                    opacity: 1,
+                                    y: [0, -12, 0],
+                                    rotate: 0
+                                }}
+                                viewport={{ once: true }}
+                                transition={{
+                                    opacity: { duration: 0.5, delay: 0.3 },
+                                    rotate: { duration: 0.5, delay: 0.3 },
+                                    y: {
+                                        duration: 2.5,
+                                        repeat: Infinity,
+                                        ease: "easeInOut",
+                                        delay: 0.8,
+                                        repeatType: "loop"
+                                    }
+                                }}
                             />
-                            <img
+                            <motion.img
                                 src={TToy}
                                 alt="T Letter Toy"
                                 className="w-20 h-20 object-contain"
                                 draggable={false}
+                                initial={{ opacity: 0, y: -20, rotate: 15 }}
+                                animate={{
+                                    opacity: 1,
+                                    y: [0, -15, 0],
+                                    rotate: 0
+                                }}
+                                viewport={{ once: true }}
+                                transition={{
+                                    opacity: { duration: 0.5, delay: 0.4 },
+                                    rotate: { duration: 0.5, delay: 0.4 },
+                                    y: {
+                                        duration: 2.8,
+                                        repeat: Infinity,
+                                        ease: "easeInOut",
+                                        delay: 1,
+                                        repeatType: "loop"
+                                    }
+                                }}
                             />
                         </div>
                     </div>

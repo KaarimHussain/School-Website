@@ -36,13 +36,13 @@ export default function Navbar() {
         <header className="fixed sm:top-5 top-3 left-1/2 transform -translate-x-1/2 w-[95%] md:w-[80%] max-w-7xl z-50">
             <nav className="bg-white rounded-2xl shadow-lg px-5 flex items-center justify-between">
                 {/* Logo */}
-                <div className="shrink-0 flex items-center">
+                <Link to={"/"} onClick={scrollToTop} className="shrink-0 flex items-center">
                     <img
                         src={Logo}
                         className="object-contain w-28 sm:w-35 aspect-video"
                         alt="logo"
                     />
-                </div>
+                </Link>
 
                 {/* Hamburger Menu button (Mobile) */}
                 <button
@@ -94,7 +94,7 @@ export default function Navbar() {
                     <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
                         <DialogTrigger asChild>
                             <Button className="bg-red-600 text-white hover:bg-yellow-500 rounded-full text-lg" size={"lg"}>
-                                Contact Us
+                                Get Started
                             </Button>
                         </DialogTrigger>
                         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
@@ -107,8 +107,8 @@ export default function Navbar() {
             {/* Mobile Dropdown Menu */}
             <div
                 className={`lg:hidden transition-all duration-200 ${menuOpen
-                        ? "max-h-80 opacity-100 mt-1 pointer-events-auto"
-                        : "max-h-0 opacity-0 pointer-events-none"
+                    ? "max-h-80 opacity-100 mt-1 pointer-events-auto"
+                    : "max-h-0 opacity-0 pointer-events-none"
                     } overflow-hidden bg-white rounded-2xl shadow-lg w-full`}
             >
                 <ul className="flex flex-col space-y-2 px-6 py-4">
@@ -137,7 +137,7 @@ export default function Navbar() {
                                         setDialogOpen(true);
                                     }}
                                 >
-                                    Contact Us
+                                    Get Started
                                 </Button>
                             </DialogTrigger>
                             <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
