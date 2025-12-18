@@ -9,18 +9,18 @@ export default function WhyChooseUs() {
     const features = [
         {
             icon: Gamepad2,
-            title: "Safe Play Areas",
-            description: "Our carefully designed outdoor and indoor play spaces promote physical development, social interaction, and joyful exploration in a secure environment."
+            title: "Elite Sports & Safe Play",
+            description: "Our secure, high-standard facilities host professional weekly football coaching to improve physical agility and teamwork."
         },
         {
             icon: Rocket,
-            title: "Field Trips & Adventures",
-            description: "We organize educational excursions and special events that extend learning beyond the classroom and create lasting memories."
+            title: "Quiet Study Zones",
+            description: "We provide dedicated, distraction-free zones for National Curriculum tuition and our expert-led Coding and Robotics club."
         },
         {
             icon: BookOpen,
-            title: "Literacy Corner",
-            description: "Our cozy reading nooks with carefully selected age-appropriate books nurture a lifelong love of reading and language development."
+            title: "Ofsted-Registered Excellence",
+            description: "Our professional status allows parents to access Tax-Free Childcare and vouchers while ensuring the highest UK safeguarding standards."
         }
     ];
 
@@ -47,7 +47,7 @@ export default function WhyChooseUs() {
                                 viewport={{ once: true, margin: "-50px" }}
                                 transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
                             >
-                                Exceptional Learning Environment
+                                Our Exceptional Environment
                             </motion.h2>
                             <motion.p
                                 className="text-gray-500 mb-12"
@@ -56,7 +56,7 @@ export default function WhyChooseUs() {
                                 viewport={{ once: true, margin: "-50px" }}
                                 transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
                             >
-                                At Bright Future Academy, we provide a nurturing, safe, and stimulating environment where children can explore, learn, and grow with confidence. Our state-of-the-art facilities are designed with your child's development in mind.
+                                At Bright Future, we provide a sophisticated, Ofsted-registered environment specifically designed for students aged 7 and above. We bridge the gap between reliable wrap-around childcare and elite academic development, ensuring older children have a professional space to thrive.
                             </motion.p>
 
                             {/* Features List */}

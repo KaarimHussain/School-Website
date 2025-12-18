@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Facebook, Twitter, Instagram, MapPin, Phone, Mail, Clock } from "lucide-react";
-import LogoWhite from "@/assets/image/Logo-White.png";
+import LogoWhite from "@/assets/image/Logo.png";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
@@ -22,8 +22,8 @@ export default function Footer() {
     ];
 
     const contactInfo = [
-        { icon: MapPin, text: "123 Education Lane, Brightville, BV 12345" },
-        { icon: Phone, text: "+1 (555) 234-5678" },
+        { icon: MapPin, text: "Grange interlink Summerville Road Bradford BD7 1PX" },
+        { icon: Phone, text: "07828 594225" },
         { icon: Mail, text: "info@brightfuturechildcare.uk" },
         { icon: Clock, text: "Mon - Fri : 7:30 AM - 6:00 PM" }
     ];
@@ -138,7 +138,7 @@ export default function Footer() {
 
                     {/* Footer Bottom */}
                     <motion.div
-                        className="border-t border-white/20 pt-5"
+                        className="border-t border-white/20 pt-5 pb-5"
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, margin: "-50px" }}
@@ -149,7 +149,7 @@ export default function Footer() {
                                 <Link to={"/"} onClick={scrollToTop}>
                                     <img
                                         src={LogoWhite}
-                                        className="object-contain w-28 sm:w-35 aspect-video"
+                                        className="object-contain w-20 sm:w-25 aspect-square"
                                         alt="Bright Future Academy logo"
                                     />
                                 </Link>

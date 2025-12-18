@@ -99,21 +99,21 @@ export default function ContactForm({ isDialog = false, onSuccess }: ContactForm
         {
             icon: MapPin,
             title: "Visit Us",
-            content: "123 Sunshine Street\nKidsville, KD 12345",
+            content: "Grange interlink Summerville \n Road Bradford BD7 1PX",
             bgColor: "bg-blue-100",
             iconColor: "text-blue-500"
         },
         {
             icon: Phone,
             title: "Call Us",
-            content: "+1 (555) 123-4567\nMon - Fri, 8AM - 6PM",
+            content: "07828 594225\nMon - Fri : 7:30 AM - 6:00 PM",
             bgColor: "bg-pink-100",
             iconColor: "text-pink-500"
         },
         {
             icon: Mail,
             title: "Email Us",
-            content: "hello@brightfuture.edu\ninfo@brightfuture.edu",
+            content: "info@brightfuturechildcare.uk",
             bgColor: "bg-orange-100",
             iconColor: "text-orange-500"
         }

@@ -15,12 +15,12 @@ const serviceCards: ServiceCard[] = [
     {
         color: "bg-blue-500",
         icon: <BookOpen className="w-12 h-12" />,
-        title: "Early Learning"
+        title: "Early Learning & Academic Support"
     },
     {
         color: "bg-orange-500",
         icon: <Paintbrush className="w-12 h-12" />,
-        title: "Creative Arts"
+        title: "Creative Arts & Digital Innovation"
     },
     {
         color: "bg-red-500",
@@ -68,7 +68,7 @@ export default function Services() {
                             viewport={{ once: true, margin: "-50px" }}
                             transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
                         >
-                            Our Enriching Programs
+                            Professional Enriching Programs for Ages 7+
                         </motion.h2>
 
                         {/* Description */}
@@ -79,7 +79,7 @@ export default function Services() {
                             viewport={{ once: true, margin: "-50px" }}
                             transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
                         >
-                            At Bright Future Academy, we offer a variety of programs designed to nurture your child's development through play, learning, and exploration. Our experienced educators create a safe, fun, and educational environment for children to thrive.
+                            At Bright Future, we provide elite, Ofsted-registered programs designed for the modern student. For children aged 7 and above, our curriculum moves beyond basic care into advanced skill-building. We combine academic rigor with technical innovation, ensuring every child—from primary to early secondary—is equipped with the tools to excel in a competitive world.
                         </motion.p>
 
                         {/* Air Balloon at bottom-left with Parallax */}

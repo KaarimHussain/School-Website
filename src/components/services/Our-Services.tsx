@@ -6,40 +6,40 @@ export default function OurServices() {
         {
             id: 1,
             icon: BookOpen,
-            title: "Early Education",
-            description: "Comprehensive learning programs designed to build strong educational foundations for young minds.",
+            title: "Wrap-Around Care",
+            description: "Ofsted-Registered Childcare Professional wrap-around care for students aged 7 to 14. We provide a safe, regulated, and sophisticated environment that bridges the gap between school and home while meeting the highest UK safeguarding standards.",
             color: "bg-blue-500",
             iconBg: "bg-blue-100"
         },
         {
             id: 2,
             icon: Palette,
-            title: "Creative Arts",
-            description: "Nurturing creativity through painting, drawing, and hands-on art activities that spark imagination.",
+            title: "11+ & SATS Preparation",
+            description: "Targeted coaching for KS2 SATS and 11+ entrance exams. We focus on verbal reasoning, non-verbal reasoning, English, and Maths to ensure your child secures their place in top grammar and independent schools.",
             color: "bg-red-500",
             iconBg: "bg-red-100"
         },
         {
             id: 3,
             icon: Music,
-            title: "Music & Dance",
-            description: "Fun music and movement classes that develop rhythm, coordination, and self-expression.",
+            title: "Secondary Tuition",
+            description: "KS3 & GCSE Tuition Expert-led subject mastery for secondary students. We align our teaching with the UK National Curriculum to boost grades in core subjects, building the academic discipline required for GCSE success.",
             color: "bg-orange-400",
             iconBg: "bg-orange-100"
         },
         {
             id: 4,
             icon: Globe,
-            title: "Language Learning",
-            description: "Interactive language programs that introduce children to new languages in a playful environment.",
+            title: "Coding & Robotics",
+            description: "Weekly Coding & Robotics Club A high-tech STEM program where students move from digital consumers to creators. Once a week, children build and program robots, developing essential skills in logic, engineering, and Python/Block coding.",
             color: "bg-cyan-500",
             iconBg: "bg-cyan-100"
         },
         {
             id: 5,
             icon: Heart,
-            title: "Social Development",
-            description: "Building social skills, empathy, and teamwork through guided group activities and play.",
+            title: "Football Coaching",
+            description: "Professional Football Coaching Weekly high-energy sessions led by qualified coaches. We focus on teamwork, discipline, and skill development to build a love of the game.",
             color: "bg-pink-500",
             iconBg: "bg-pink-100"
         },
@@ -59,7 +59,7 @@ export default function OurServices() {
                 <div className="max-w-7xl mx-auto">
                     {/* Header */}
                     <div className="text-center mb-16">
-                        <motion.p 
+                        <motion.p
                             className="text-orange-300 text-sm font-medium mb-2"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -68,7 +68,7 @@ export default function OurServices() {
                         >
                             Our Services
                         </motion.p>
-                        <motion.h2 
+                        <motion.h2
                             className="text-4xl md:text-5xl font-bold text-red-500 mb-6"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -77,7 +77,7 @@ export default function OurServices() {
                         >
                             What We Offer Your Child
                         </motion.h2>
-                        <motion.p 
+                        <motion.p
                             className="text-gray-500 max-w-2xl mx-auto"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -99,10 +99,10 @@ export default function OurServices() {
                                     initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true, margin: "-50px" }}
-                                    transition={{ 
-                                        duration: 0.4, 
+                                    transition={{
+                                        duration: 0.4,
                                         delay: index * 0.08,
-                                        ease: "easeOut" 
+                                        ease: "easeOut"
                                     }}
                                 >
                                     {/* Icon */}

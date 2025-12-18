@@ -16,8 +16,8 @@ const features = [
 
 export default function AboutUs() {
     return (
-        <section className="min-h-[20vh] w-full bg-white py-10 px-10">
-            <div className="max-w-7xl mx-auto">
+        <section className="min-h-[30vh] w-full lg:pb-0 lg:pt-0 pt-20 pb-20 px-10">
+            <div className="max-w-7xl mx-auto relative lg:bottom-20">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Left Section - Blob with Image */}
                     <motion.div
@@ -68,7 +68,7 @@ export default function AboutUs() {
                             viewport={{ once: true, margin: "-50px" }}
                             transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
                         >
-                            Where Little Minds Bloom
+                            Our Professional Approach Sets Us Apart.
                         </motion.h2>
 
                         {/* Description */}
@@ -79,7 +79,7 @@ export default function AboutUs() {
                             viewport={{ once: true, margin: "-50px" }}
                             transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
                         >
-                            At Bright Future Academy, we provide a nurturing environment where children can explore, discover, and grow. Our experienced educators are dedicated to fostering creativity, curiosity, and confidence in every child through play-based learning and personalized attention.
+                            We take a sophisticated approach to wrap-around care. By operating under strict Ofsted regulations, we guarantee a level of professionalism that provides parents with absolute peace of mind. Our staff are not just carers, they are educators and mentors who manage a balanced curriculum of National Curriculum tuition, STEM robotics, and football. For the modern UK family, we provide a reliable, high tier service that ensures every child especially older students is challenged, supported, and inspired in a professional, distraction-free environment.
                         </motion.p>
 
                         {/* Features Grid */}

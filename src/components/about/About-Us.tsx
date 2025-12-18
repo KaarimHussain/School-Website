@@ -96,7 +96,7 @@ export default function AboutUs() {
                                 viewport={{ once: true, margin: "-50px" }}
                                 transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
                             >
-                                Fostering Growth and Discovery
+                                Our Commitment to Safeguarding
                             </motion.h2>
                             <motion.p
                                 className="text-gray-500 leading-relaxed mb-8"
@@ -105,7 +105,7 @@ export default function AboutUs() {
                                 viewport={{ once: true, margin: "-50px" }}
                                 transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
                             >
-                                At Bright Future Academy, we're committed to providing a nurturing environment where children feel safe, valued, and excited to learn. Our play-based curriculum encourages curiosity and creativity while building foundational academic and social skills. We believe in celebrating each child's unique learning journey.
+                                At Bright Future, we offer more than just childcare; we provide a high-performance environment for students aged 7 and above. As an Ofsted-registered provider, I am committed to delivering elite standards that combine National Curriculum tuition with future-ready skills like Robotics and Football. Our goal is to mentor every child toward academic success and personal excellence in a safe, professional setting.
                             </motion.p>
 
                             {/* Headmaster Info */}
