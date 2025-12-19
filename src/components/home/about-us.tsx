@@ -4,6 +4,7 @@ import AboutToyImage from "@/assets/image/About-Toys.png";
 
 import { Check } from "lucide-react";
 import { Button } from "../ui/button";
+import { Link } from "react-router-dom";
 
 const features = [
     "Nurturing Environment",
@@ -117,12 +118,14 @@ export default function AboutUs() {
                             viewport={{ once: true, margin: "-50px" }}
                             transition={{ duration: 0.4, delay: 0.5, ease: "easeOut" }}
                         >
-                            <Button
-                                className="bg-red-600 text-white hover:bg-yellow-500 rounded-full px-8 py-6 text-base font-medium"
-                                size="lg"
-                            >
-                                Discover Bright Future
-                            </Button>
+                            <Link to="/contact">
+                                <Button
+                                    className="bg-red-600 text-white hover:bg-yellow-500 rounded-full px-8 py-6 text-base font-medium"
+                                    size="lg"
+                                >
+                                    Discover Bright Future
+                                </Button>
+                            </Link>
                         </motion.div>
                     </div>
                 </div>

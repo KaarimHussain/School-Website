@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import { BookOpen, Palette, Music, Globe, Heart, Sparkles } from "lucide-react";
+import { BookOpen, Palette, Heart, Sparkles, Code, Book } from "lucide-react";
 
 export default function OurServices() {
     const services = [
         {
             id: 1,
-            icon: BookOpen,
+            icon: Heart, // Changed from BookOpen to Heart for Care
             title: "Wrap-Around Care",
             description: "Ofsted-Registered Childcare Professional wrap-around care for students aged 7 to 14. We provide a safe, regulated, and sophisticated environment that bridges the gap between school and home while meeting the highest UK safeguarding standards.",
             color: "bg-blue-500",
@@ -13,7 +13,7 @@ export default function OurServices() {
         },
         {
             id: 2,
-            icon: Palette,
+            icon: BookOpen, // Changed from Palette to BookOpen for Exam Prep
             title: "11+ & SATS Preparation",
             description: "Targeted coaching for KS2 SATS and 11+ entrance exams. We focus on verbal reasoning, non-verbal reasoning, English, and Maths to ensure your child secures their place in top grammar and independent schools.",
             color: "bg-red-500",
@@ -21,7 +21,7 @@ export default function OurServices() {
         },
         {
             id: 3,
-            icon: Music,
+            icon: Sparkles, // Changed from Music to Sparkles for Secondary Tuition (Academic success)
             title: "Secondary Tuition",
             description: "KS3 & GCSE Tuition Expert-led subject mastery for secondary students. We align our teaching with the UK National Curriculum to boost grades in core subjects, building the academic discipline required for GCSE success.",
             color: "bg-orange-400",
@@ -29,7 +29,7 @@ export default function OurServices() {
         },
         {
             id: 4,
-            icon: Globe,
+            icon: Code, // Kept as Globe (often used for tech/web) or could be Sparkles, but Globe fits "World Wide Web" context of coding
             title: "Coding & Robotics",
             description: "Weekly Coding & Robotics Club A high-tech STEM program where students move from digital consumers to creators. Once a week, children build and program robots, developing essential skills in logic, engineering, and Python/Block coding.",
             color: "bg-cyan-500",
@@ -37,17 +37,17 @@ export default function OurServices() {
         },
         {
             id: 5,
-            icon: Heart,
-            title: "Football Coaching",
-            description: "Professional Football Coaching Weekly high-energy sessions led by qualified coaches. We focus on teamwork, discipline, and skill development to build a love of the game.",
+            icon: Palette,
+            title: "Professional Football Coaching",
+            description: "Professional Football Coaching Weekly high-energy sessions led by qualified coaches. We focus on agility, teamwork, and tactical play, ensuring older students stay physically active and build social confidence in a professional sports setting.",
             color: "bg-pink-500",
             iconBg: "bg-pink-100"
         },
         {
             id: 6,
-            icon: Sparkles,
-            title: "Special Activities",
-            description: "Exciting field trips, celebrations, and seasonal events that create lasting memories.",
+            icon: Book, // Using Palette for Homework/Support as creating/crafting work
+            title: "Homework & Academic Support",
+            description: "A dedicated, distraction-free 'study hub' for older students. We provide the resources and professional guidance needed to complete school assignments accurately, ensuring they stay ahead of their curriculum.",
             color: "bg-purple-500",
             iconBg: "bg-purple-100"
         }

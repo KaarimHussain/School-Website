@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Gamepad2, Rocket, BookOpen } from "lucide-react";
-import WhyChooseUsImage from "@/assets/image/Why-Choose-Us.jpg";
+import WhyChooseUsImage from "@/assets/image/school-web-image/gallery-7.jpeg";
 import YToy from "@/assets/image/Y-Letter-Toy.png";
 import HToy from "@/assets/image/H-Letter-Toy.png";
 import RocketToy from "@/assets/image/Rocket.png";

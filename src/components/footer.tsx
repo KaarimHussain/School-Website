@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Facebook, Twitter, Instagram, MapPin, Phone, Mail, Clock } from "lucide-react";
-import LogoWhite from "@/assets/image/Logo.png";
+import LogoWhite from "@/assets/image/Logo-White.png";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
@@ -149,7 +149,7 @@ export default function Footer() {
                                 <Link to={"/"} onClick={scrollToTop}>
                                     <img
                                         src={LogoWhite}
-                                        className="object-contain w-20 sm:w-25 aspect-square"
+                                        className="object-contain w-20 sm:w-35 aspect-video"
                                         alt="Bright Future Academy logo"
                                     />
                                 </Link>

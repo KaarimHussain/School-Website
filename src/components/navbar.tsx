@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "./ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "./ui/dialog";
 import ContactForm from "./contact-form";
-import Logo from "@/assets/image/Logo.png";
+import Logo from "@/assets/image/Logo-Main.png";
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -51,7 +51,7 @@ export default function Navbar() {
                 <Link to={"/"} onClick={scrollToTop} className="shrink-0 flex items-center">
                     <motion.img
                         src={Logo}
-                        className="object-contain w-22 sm:w-25 aspect-square"
+                        className="object-contain w-22 sm:w-35 aspect-video"
                         alt="logo"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
