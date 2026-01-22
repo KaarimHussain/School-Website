@@ -26,7 +26,7 @@ export default function Testimonials() {
             id: 2,
             text: "The balance of academics and sport here is perfect. The National Curriculum tuition has given my daughter so much confidence with her schoolwork, and she looks forward to the weekly football sessions all bridge. As they are Ofsted-registered, I can use my Tax-Free Childcare, which makes this elite level of service incredibly affordable for our family.",
             name: "David Miller",
-            role: "Parent of a Year 6 Student",
+            role: "Parent of a Year 8 Student",
             avatar: ReviewAvatar2
         },
         {
@@ -40,7 +40,7 @@ export default function Testimonials() {
             id: 4,
             text: "Bright Future provides total peace of mind. Knowing they are Ofsted-registered means I don't have to worry about safety or standards. My boys are thriving—one is obsessed with the coding projects and the other has improved his football skills immensely. It’s the best wrap-around care we’ve ever used, specifically because they cater so well to the needs of older students",
             name: "James Wilson",
-            role: "Parent of two students, ages 7 and 10",
+            role: "Parent of two students, ages 8 and 10",
             avatar: ReviewAvatar4
         },
         {

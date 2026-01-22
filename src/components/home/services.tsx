@@ -68,7 +68,7 @@ export default function Services() {
                             viewport={{ once: true, margin: "-50px" }}
                             transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
                         >
-                            Professional Enriching Programs for Ages 7+
+                            Professional Enriching Programs for Ages 8+
                         </motion.h2>
 
                         {/* Description */}
@@ -79,7 +79,7 @@ export default function Services() {
                             viewport={{ once: true, margin: "-50px" }}
                             transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
                         >
-                            At Bright Future, we provide elite, Ofsted-registered programs designed for the modern student. For children aged 7 and above, our curriculum moves beyond basic care into advanced skill-building. We combine academic rigor with technical innovation, ensuring every child—from primary to early secondary—is equipped with the tools to excel in a competitive world.
+                            At Bright Future, we provide elite, Ofsted-registered programs designed for the modern student. For children aged 8 and above, our curriculum moves beyond basic care into advanced skill-building. We combine academic rigor with technical innovation, ensuring every child—from primary to early secondary—is equipped with the tools to excel in a competitive world.
                         </motion.p>
 
                         {/* Air Balloon at bottom-left with Parallax */}

@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
-import Teacher1 from "@/assets/image/Teacher-1.jpg";
-import Teacher2 from "@/assets/image/Teacher-2.jpg";
-import Teacher3 from "@/assets/image/Teacher-3.jpg";
+import Teacher1 from "@/assets/image/images-v2/Teacher-1.jpeg";
+import Teacher2 from "@/assets/image/images-v2/Teacher-2.jpeg";
+import Teacher3 from "@/assets/image/images-v2/Teacher-3.jpeg";
 
 export default function OurTeacher() {
     const teachers = [
         {
             id: 1,
-            name: "Emma Johnson",
+            name: "Haleema Khantoon",
             role: "Early Childhood Specialist",
             image: Teacher2,
             bgColor: "bg-red-500",
@@ -15,7 +15,7 @@ export default function OurTeacher() {
         },
         {
             id: 2,
-            name: "Michael Thompson",
+            name: "Faisal Khan",
             role: "Creative Arts Educator",
             image: Teacher1,
             bgColor: "bg-blue-600",
@@ -23,7 +23,7 @@ export default function OurTeacher() {
         },
         {
             id: 3,
-            name: "Sophia Garcia",
+            name: "Saira Atif",
             role: "Play-Based Learning Expert",
             image: Teacher3,
             bgColor: "bg-orange-400",

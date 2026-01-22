@@ -7,7 +7,7 @@ export default function OurServices() {
             id: 1,
             icon: Heart, // Changed from BookOpen to Heart for Care
             title: "Wrap-Around Care",
-            description: "Ofsted-Registered Childcare Professional wrap-around care for students aged 7 to 14. We provide a safe, regulated, and sophisticated environment that bridges the gap between school and home while meeting the highest UK safeguarding standards.",
+            description: "Ofsted-Registered Childcare Professional wrap-around care for students aged 8 to 14. We provide a safe, regulated, and sophisticated environment that bridges the gap between school and home while meeting the highest UK safeguarding standards.",
             color: "bg-blue-500",
             iconBg: "bg-blue-100"
         },

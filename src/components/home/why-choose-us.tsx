@@ -56,7 +56,7 @@ export default function WhyChooseUs() {
                                 viewport={{ once: true, margin: "-50px" }}
                                 transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
                             >
-                                At Bright Future, we provide a sophisticated, Ofsted-registered environment specifically designed for students aged 7 and above. We bridge the gap between reliable wrap-around childcare and elite academic development, ensuring older children have a professional space to thrive.
+                                At Bright Future, we provide a sophisticated, Ofsted-registered environment specifically designed for students aged 8 and above. We bridge the gap between reliable wrap-around childcare and elite academic development, ensuring older children have a professional space to thrive.
                             </motion.p>
 
                             {/* Features List */}

@@ -105,7 +105,7 @@ export default function AboutUs() {
                                 viewport={{ once: true, margin: "-50px" }}
                                 transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
                             >
-                                At Bright Future, we offer more than just childcare; we provide a high-performance environment for students aged 7 and above. As an Ofsted-registered provider, I am committed to delivering elite standards that combine National Curriculum tuition with future-ready skills like Robotics and Football. Our goal is to mentor every child toward academic success and personal excellence in a safe, professional setting.
+                                At Bright Future, we offer more than just childcare; we provide a high-performance environment for students aged 8 and above. As an Ofsted-registered provider, I am committed to delivering elite standards that combine National Curriculum tuition with future-ready skills like Robotics and Football. Our goal is to mentor every child toward academic success and personal excellence in a safe, professional setting.
                             </motion.p>
 
                             {/* Headmaster Info */}
